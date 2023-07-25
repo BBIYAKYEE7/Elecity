@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="image-1.png" type="image/x-icon" />
+  <title>수력 에너지 발전현황</title>
+  <div class="main-page-gmf">
+    <div class="auto-group-dand-e6D">
+      <img class="image-1-83K" src="image-1.png"/>
+      <div class="elecity-DqT">
+        <button type="button" onclick="window.location.href='index.html'"class="btn"><span>Elecity</span></button>
+      </div>
+      <div class="item--yzy">
+        <button type="button" onclick="window.location.href='market.html'" class="btn"><span>에너지 거래소</span></button>
+      </div>
+      <div class="item--HKX">
+        <button type="button" onclick="window.location.href='sunlight.html'" class="btn"><span>태양광 에너지 발전현황</span></button>
+      </div>
+      <div class="item--7JZ">
+        <button type="button" onclick="window.location.href='wind.html'" class="btn"><span>풍력 에너지 발전현황</span></button>
+      </div>
+      <div class="item--tyX">
+        <button type="button" onclick="window.location.href='water.html'" class="btn"><span>수력 에너지 발전현황</span></button>
+      </div>
+    </div>
+  <title>에너지 발전 현황</title>
+  <style>
+     html {
+            font-size: 90%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-page-gmf .auto-group-dand-e6D {
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(180deg, #0093ff -0%, rgba(0, 147, 255, 0.296875) 58.33%, rgba(0, 147, 255, 0) 100%);
+            flex-shrink: 0;
+            padding: 1.2rem 2rem 1.3rem 2rem;
+        }
+
+        .main-page-gmf .auto-group-dand-e6D .image-1-83K {
+            width: 10rem;
+            height: 10rem;
+            object-fit: cover;
+            vertical-align: top;
+            flex-shrink: 0;
+            margin-right: 1.5rem;
+        }
+
+        .main-page-gmf .auto-group-dand-e6D .elecity-DqT,
+        .main-page-gmf .auto-group-dand-e6D .item--HKX,
+        .main-page-gmf .auto-group-dand-e6D .item--7JZ,
+        .main-page-gmf .auto-group-dand-e6D .item--tyX,
+        .main-page-gmf .auto-group-dand-e6D .item--yzy {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #000000;
+            font-family: Pretendard, 'Source Sans Pro';
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-right: 1.5rem;
+        }
+
+        /* 모바일 화면 스타일 */
+        @media (max-width: 767px) {
+            .main-page-gmf .auto-group-dand-e6D {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .main-page-gmf .auto-group-dand-e6D .image-1-83K {
+                margin-right: 0;
+                margin-bottom: 1.5rem;
+            }
+        }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      max-width: 100%;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .chart-container {
+      width: 50%;
+      height: 100%;
+    }
+
+    .info-container {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .info-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .info-item span {
+      font-weight: bold;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+.btn {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="chart-container">
+      <canvas id="hydroPowerChart"></canvas>
+    </div>
+    <div class="info-container">
+      <h2>에너지 발전 현황</h2>
+      <div class="info-item">
+        <span>수력발전소 발전량</span>
+        <span id="hydroPower">180 MW</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const hydroPowerCtx = document.getElementById('hydroPowerChart').getContext('2d');
+
+    const hydroPowerData = {
+      labels: ['수력발전소'],
+      datasets: [
+        {
+          label: '발전량 (MW)',
+          data: [180],
+          backgroundColor: 'rgba(54, 162, 235, 0.5)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1,
+        },
+        {
+          label: '변동 추이',
+          data: [200, 160, 180, 170, 190],
+          type: 'line',
+          fill: false,
+          borderColor: 'rgba(0, 0, 255, 1)',
+          borderWidth: 2,
+          pointRadius: 0,
+        }
+      ]
+    };
+
+    const hydroPowerChart = new Chart(hydroPowerCtx, {
+      type: 'bar',
+      data: hydroPowerData,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // 전력 정보 업데이트
+    function updatePowerInfo() {
+      const hydroPowerElement = document.getElementById('hydroPower');
+
+      hydroPowerElement.textContent = `${hydroPowerData.datasets[0].data[0]} MW`;
+    }
+
+    // 초기 전력 정보 업데이트
+    updatePowerInfo();
+  </script>
+</body>
+</html>
+
+
+
+

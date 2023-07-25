@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="image-1.png" type="image/x-icon" />
+  <title>Elecity 에너지 마켓</title>
+  <style>
+html {
+  font-size: 56%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.main-page-gmf .auto-group-dand-e6D {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #0093ff -0%, rgba(0, 147, 255, 0.296875) 58.33%, rgba(0, 147, 255, 0) 100%);
+  flex-shrink: 0;
+  padding: 1.2rem 2rem 1.3rem 2rem;
+}
+
+.main-page-gmf .auto-group-dand-e6D .image-1-83K {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+  margin-right: 1.5rem;
+}
+
+.main-page-gmf .auto-group-dand-e6D .elecity-DqT,
+.main-page-gmf .auto-group-dand-e6D .item--HKX,
+.main-page-gmf .auto-group-dand-e6D .item--7JZ,
+.main-page-gmf .auto-group-dand-e6D .item--tyX,
+.main-page-gmf .auto-group-dand-e6D .item--yzy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000000;
+  font-family: Pretendard, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-right: 1.5rem;
+}
+
+/* 모바일 화면 스타일 */
+@media (max-width: 767px) {
+  .main-page-gmf .auto-group-dand-e6D {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .main-page-gmf .auto-group-dand-e6D .image-1-83K {
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+  }
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+      box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.25);
+      background: linear-gradient(180deg, #d9d9d9 -0%, rgba(162, 162, 162, 0) 100%);
+      border-radius: 5.8rem;
+      flex-shrink: 0;
+    }
+
+    .chart-container {
+      flex: 1;
+    }
+
+    .trading-container {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .stock-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .stock-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .stock-item:last-child {
+      border-bottom: none;
+    }
+
+    .stock-item .symbol {
+      font-weight: bold;
+    }
+
+    .stock-item .price {
+      margin-left: 10px;
+    }
+
+    .stock-item .profit-loss {
+      margin-left: 10px;
+      font-size: 12px;
+    }
+
+    .stock-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .stock-actions button {
+      margin-top: 10px;
+      padding: 5px 10px;
+    }
+
+    canvas {
+      width: 100%;
+      height: 300px;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+.btn {
+  border: none;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+  </style>
+<div class="main-page-gmf">
+  <div class="auto-group-dand-e6D">
+    <img class="image-1-83K" src="image-1.png"/>
+    <div class="elecity-DqT">
+      <button type="button" onclick="window.location.href='index.html'"class="btn"><span>Elecity</span></button>
+    </div>
+    <div class="item--yzy">
+      <button type="button" onclick="window.location.href='market.html'" class="btn"><span>에너지 거래소</span></button>
+    </div>
+    <div class="item--HKX">
+      <button type="button" onclick="window.location.href='sunlight.html'" class="btn"><span>태양광 에너지 발전현황</span></button>
+    </div>
+    <div class="item--7JZ">
+      <button type="button" onclick="window.location.href='wind.html'" class="btn"><span>풍력 에너지 발전현황</span></button>
+    </div>
+    <div class="item--tyX">
+      <button type="button" onclick="window.location.href='water.html'" class="btn"><span>수력 에너지 발전현황</span></button>
+    </div>
+  </div>
+</head>
+<body>
+  <div class="container">
+    <div class="chart-container">
+      <h1>Elecity 에너지 시장</h1>
+      <div style="position: relative; width: 100%;">
+        <canvas id="stockChart"></canvas>
+      </div>
+      <ul class="stock-list" id="stockList">
+        <!-- 주식 종목이 동적으로 추가됨 -->
+      </ul>
+    </div>
+    <div class="trading-container">
+      <div class="stock-actions">
+        <h2>구매/판매</h2>
+        <div class="input-group">
+          <select id="symbolSelect">
+            <!-- 주식 종목 옵션은 동적으로 추가됨 -->
+          </select>
+          <input type="number" id="quantityInput" placeholder="수량">
+          <button onclick="buyStock()" >구매</button>
+          <button onclick="sellStock()">판매</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // 가상의 주식 시작 정보
+    let stockStartData = [
+      { symbol: '풍력 에너지', startPrice: 99.3, quantity: 0 },
+      { symbol: '태양광 에너지', startPrice: 93.4, quantity: 0 }
+    ];
+
+    // 가상의 주식 가격 데이터
+    let stockData = [...stockStartData].map(stock => ({ ...stock, price: stock.startPrice, history: [], profitLoss: 0 }));
+
+    // Canvas 요소 가져오기
+    const ctx = document.getElementById('stockChart').getContext('2d');
+
+    // 그래프 초기화
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: []
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: false
+          }
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+            labels: {
+              usePointStyle: true,
+              padding: 10
+            }
+          }
+        },
+        animation: {
+          duration: 0
+        }
+      }
+    });
+
+    // 주식 가격 업데이트 함수
+    function updateStockPrices() {
+      stockData.forEach(stock => {
+        const randomChange = (Math.random()-0.5) * 1.0;
+        stock.price += randomChange;
+        stock.price = Math.max(stock.price, 0.01);
+
+        stock.history.push(stock.price.toFixed(2));
+        if (stock.history.length > 60) {
+          stock.history.shift();
+        }
+
+        const stockItem = document.getElementById(`stock-${stock.symbol}`);
+        if (stockItem) {
+          const priceDiv = stockItem.querySelector('.price');
+          priceDiv.textContent = `$${stock.price.toFixed(2)}`;
+
+          const profitLossDiv = stockItem.querySelector('.profit-loss');
+          const profitLoss = ((stock.price - stock.startPrice) / stock.startPrice) * 100;
+          profitLossDiv.textContent = `${profitLoss.toFixed(2)}%`;
+          profitLossDiv.style.color = profitLoss >= 0 ? 'red' : 'blue';
+        }
+      });
+
+      // 주식 정보 업데이트
+      updateStockList();
+
+      // 그래프 업데이트
+      updateChart();
+
+      // 3초마다 주식 가격 업데이트
+      setTimeout(updateStockPrices, 1000);
+    }
+
+    // 주식 매수 함수
+    function buyStock() {
+      const symbolSelect = document.getElementById('symbolSelect');
+      const quantityInput = document.getElementById('quantityInput');
+      const symbol = symbolSelect.value;
+      const quantity = parseInt(quantityInput.value);
+
+      if (quantity && quantity > 0) {
+        const selectedStock = stockData.find(stock => stock.symbol === symbol);
+
+        if (selectedStock) {
+          selectedStock.quantity += quantity;
+
+          // 입력 필드 초기화
+          quantityInput.value = '';
+
+          // 주식 정보 업데이트
+          updateStockList();
+
+          // 그래프 업데이트
+          updateChart();
+        }
+      }
+    }
+
+    // 주식 매도 함수
+    function sellStock() {
+      const symbolSelect = document.getElementById('symbolSelect');
+      const quantityInput = document.getElementById('quantityInput');
+      const symbol = symbolSelect.value;
+      const quantity = parseInt(quantityInput.value);
+
+      if (quantity && quantity > 0) {
+        const selectedStock = stockData.find(stock => stock.symbol === symbol);
+
+        if (selectedStock && selectedStock.quantity >= quantity) {
+          selectedStock.quantity -= quantity;
+
+          // 입력 필드 초기화
+          quantityInput.value = '';
+
+          // 주식 정보 업데이트
+          updateStockList();
+
+          // 그래프 업데이트
+          updateChart();
+        } else {
+          alert('보유한 에너지의 양이 부족합니다.');
+        }
+      }
+    }
+
+    // 주식 리스트 업데이트 함수
+    function updateStockList() {
+      const stockList = document.getElementById('stockList');
+      stockList.innerHTML = '';
+
+      stockData.forEach(stock => {
+        const stockItem = document.createElement('li');
+        stockItem.className = 'stock-item';
+        stockItem.id = `stock-${stock.symbol}`;
+
+        const symbolDiv = document.createElement('div');
+        symbolDiv.className = 'symbol';
+        symbolDiv.textContent = stock.symbol;
+
+        const priceDiv = document.createElement('div');
+        priceDiv.className = 'price';
+        priceDiv.textContent = `${stock.price.toFixed(2)}원`;
+
+        const quantityDiv = document.createElement('div');
+        quantityDiv.className = 'quantity';
+        quantityDiv.textContent = `수량: ${stock.quantity}`;
+
+        const profitLossDiv = document.createElement('div');
+        profitLossDiv.className = 'profit-loss';
+        const profitLoss = ((stock.price - stock.startPrice) / stock.startPrice) * 100;
+        profitLossDiv.textContent = `${profitLoss.toFixed(2)}%`;
+        profitLossDiv.style.color = profitLoss >= 0 ? 'red' : 'blue';
+
+        stockItem.appendChild(symbolDiv);
+        stockItem.appendChild(priceDiv);
+        stockItem.appendChild(quantityDiv);
+        stockItem.appendChild(profitLossDiv);
+
+        stockList.appendChild(stockItem);
+      });
+    }
+
+    // 그래프 업데이트 함수
+    function updateChart() {
+      chart.data.labels = Array.from({ length: 60 }, (_, i) => i + 1);
+      chart.data.datasets = stockData.map(stock => ({
+        label: stock.symbol,
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        borderColor: stock.symbol === '풍력 에너지' ? 'rgba(0, 0, 255, 1)' : 'rgba(255, 0, 0, 1)',
+        borderWidth: 2,
+        pointRadius: 0,
+        data: stock.history
+      }));
+      chart.update();
+    }
+
+    // 초기 주식 가격 업데이트
+    updateStockPrices();
+
+    // 주식 종목 옵션 업데이트
+    const symbolSelect = document.getElementById('symbolSelect');
+    stockStartData.forEach(stock => {
+      const option = document.createElement('option');
+      option.value = stock.symbol;
+      option.textContent = stock.symbol;
+      symbolSelect.appendChild(option);
+    });
+
+    
+  </script>
+</body>
+</html>

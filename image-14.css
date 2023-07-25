@@ -1,0 +1,51 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+input {
+  border: none;
+}
+
+body {
+  width: 100%;
+  font-size: 1.6rem; /* 1.6rem (16px) is equivalent to 10px when using 62.5% font-size on the html element */
+}
+
+.image-14-4aV {
+  width: 100%;
+  height: 10rem; /* 10rem (100px) will adjust based on the font-size of the html element */
+  object-fit: cover;
+  vertical-align: top;
+}
+
+/* 모바일 화면 스타일 */
+@media (max-width: 767px) {
+  body {
+    width: 100%;
+    font-size: 1.2rem; /* You can adjust this value as needed for better readability on mobile */
+  }
+
+  .image-14-4aV {
+    height: 5rem; /* Adjust the image height for mobile screens */
+  }
+}
+
+/* 데스크탑 화면 스타일 */
+@media (min-width: 768px) {
+  body {
+    width: 50rem; /* You can adjust this value as needed to set the maximum width on desktop screens */
+  }
+
+  .image-14-4aV {
+    height: 10rem; /* Adjust the image height for desktop screens */
+  }
+}
